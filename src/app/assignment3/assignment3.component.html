@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="logItems()">Display Details</button>
+
+<p *ngIf="detailsShown">
+        Details Shown!
+</p>
+
+<ul class="list-group" *ngFor="let log of logs; index as i">
+    <li [ngClass]="getBackgroundColor(i+1)">Log Number: {{i+1}} Log Details: {{log}}</li>
+</ul>
